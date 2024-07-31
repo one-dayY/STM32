@@ -24,7 +24,7 @@ void MyDMA_Init(uint32_t AddrA,uint32_t AddrB,uint16_t Size)
 	DMA_InitStructure.DMA_Priority = DMA_Priority_Medium;
 	DMA_Init(DMA1_Channel1,&DMA_InitStructure);
 	
-	//使能DMA
+	//这里先不给使能，初始化后不会立刻工作，等后续调用Transfer后，再开始
 	DMA_Cmd(DMA1_Channel1,DISABLE);
 }
 
